@@ -9,38 +9,40 @@
     </ion-toolbar>
 </ion-header>
 
-<ion-content>
-    <ion-card class="welcome-card">
-        <img src="/assets/shapes.svg" alt=""/>
-        <ion-card-header>
-            <ion-card-subtitle>FoodWaste Management</ion-card-subtitle>
-            <ion-card-title>Welcome Admin</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-            <p>This application can be used to track food wasted by students.</p>
-        </ion-card-content>
-    </ion-card>
+<ion-content padding style="--background: #043157;">
 
-    <ion-card>
-        <ion-card-header>
-           Food Wastage Statistics
-        </ion-card-header>
-        <ion-card-content>
-            <canvas #lineCanvas></canvas>
-        </ion-card-content>
-    </ion-card>
+    
+    <ion-icon name="contract" class = "logo" color = "light"></ion-icon>
+    
+    <ion-item class = "heading" style="--background: #043157;">
+        <ion-label>Food Waste Management</ion-label>       
+    </ion-item>
 
-    <ion-card>
-        <ion-list lines="none">
-            <ion-list-header>
-                <ion-label>Students</ion-label>
-            </ion-list-header>
-            <ion-item  (click)="openDetailsWithQueryParams(item)" *ngFor="let item of items">
-                <ion-icon slot="start" color="medium" name="person"></ion-icon>
-                <ion-label>{{item.name}}</ion-label>
+     <ion-item class = "subheading" style="--background: #043157;">
+        <ion-label>An app to track food wasted by the students.</ion-label>
+    </ion-item>
+     
+    <ion-grid block>
+        <ion-row class = "rowstyle">
+            <ion-item class = "item">
+                <ion-label position="floating" style="--background: #043157;">Username</ion-label>
+                <ion-input type = "text" [(ngModel)]="username"></ion-input>
             </ion-item>
-        </ion-list>
+        </ion-row>
 
-    </ion-card>
+        <ion-row>
+            <ion-item class = "rowstyle">
+                <ion-label position="floating" style="--background: #043157;">Password</ion-label>
+                <ion-input type = "password" [(ngModel)]="password"></ion-input>
+            </ion-item>
+        </ion-row>
+    </ion-grid>
+    
 
+    
+    
+    <ion-button fill = "solid" expand = "block" color = "dark" (click) = "login()" class = "buttonstyle">Login</ion-button>
+
+    <ion-button fill = "clear" expand = "block" color = "light" (click) = "register()" class = "buttonstyle">Don't have an account? Signup</ion-button>
+    
 </ion-content>
