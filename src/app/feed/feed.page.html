@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>feed</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-input type = "text" aria-placeholder="say" [(ngModel)] = "text"></ion-input>
+  <ion-button (click) = "post()">post</ion-button>
+  <ion-card class="welcome-card">
+    <img src="/assets/shapes.svg" alt=""/>
+    <ion-card-header>
+        <ion-card-subtitle>FoodWaste Management</ion-card-subtitle>
+        <ion-card-title>Welcome Admin</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+        <p>This application can be used to track food wasted by students.</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+       Food Wastage Statistics
+    </ion-card-header>
+    <ion-card-content>
+        <canvas #lineCanvas></canvas>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+       Food Wastage Statistics
+    </ion-card-header>
+    <ion-card-content>
+        <canvas #lineCanvas2></canvas>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-list lines="none">
+        <ion-list-header>
+            <ion-label>Students</ion-label>
+        </ion-list-header>
+        <ion-item  (click)="openDetailsWithQueryParams(item)" *ngFor="let item of items">
+            <ion-icon slot="start" color="medium" name="person"></ion-icon>
+            <ion-label>{{item.name}}</ion-label>
+        </ion-item>
+    </ion-list>
+
+  </ion-card> 
+
+  
+</ion-content>
