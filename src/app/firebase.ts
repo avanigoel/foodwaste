@@ -1,6 +1,6 @@
 import { element } from 'protractor';
 
-const firebaseConfig = {
+/*const firebaseConfig = {
     apiKey: "AIzaSyASvAwRpX-VHYsYA0sp6sAdntYOXP02I5M",
     authDomain: "foodwastemanagement-17ea8.firebaseapp.com",
     databaseURL: "https://foodwastemanagement-17ea8.firebaseio.com",
@@ -9,7 +9,7 @@ const firebaseConfig = {
     messagingSenderId: "766406849095",
     appId: "1:766406849095:web:2e10735dba1df849b7b762",
     measurementId: "G-FB8XFNYCM9"
-  }
+  }*/
 
   /*const firebaseConfig = {
     apiKey: "AIzaSyCBXpEiatVDYTM-4cYpn4tLFPRrgfburjA",
@@ -22,7 +22,18 @@ const firebaseConfig = {
     measurementId: "G-W4G9R96Q2N"
   };*/
   
+  const firebaseConfig = {
+    apiKey: "AIzaSyBbLDv9ANwSoXYHzl0Tlw5R0elgzpgYYKE",
+    authDomain: "foodwaste03.firebaseapp.com",
+    databaseURL: "https://foodwaste03.firebaseio.com",
+    projectId: "foodwaste03",
+    storageBucket: "foodwaste03.appspot.com",
+    messagingSenderId: "585763964302",
+    appId: "1:585763964302:web:ba88a896c8cb4aa45fd0df",
+    measurementId: "G-BTYKCJK136"
+  };
 
+  
   export default firebaseConfig
 
   export const snapshotToArray = snapshot =>{
